@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Mahmoud Sabri — SaaS Architect & Laravel Engineer</title>
   <meta name="description" content="Senior full-stack Laravel developer, web app engineer, and SaaS architect. Autonomous CRM systems, multi-tenant platforms, and production funnels for international enterprise networks.">
   <meta name="theme-color" content="#07090d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/app.css?v=2">
 </head>
 <body class="loading">
   <div class="cursor"></div>
@@ -32,9 +32,12 @@
         <a href="#stack">Stack</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
+        <a class="nav-mobile-cta" href="cv/Mahmoud_Sabri_CV.pdf" download>Download CV</a>
       </div>
-      <a class="btn btn-solid magnetic" href="cv/Mahmoud_Sabri_CV.pdf" download>Download CV</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      <a class="btn btn-solid magnetic nav-cta" href="cv/Mahmoud_Sabri_CV.pdf" download>Download CV</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
 
     <section class="hero" id="top">
@@ -287,7 +290,7 @@
           <p>Arabic native. English at professional working proficiency. B.S. Computer Science, WISE, 2022.</p>
           <div class="hero-cta" style="margin-top:24px;">
             <a class="btn btn-solid magnetic" href="cv/Mahmoud_Sabri_CV.pdf" download>Download CV</a>
-            <a class="btn btn-line magnetic" href="https://www.linkedin.com/in/mahmoud-herbawi-451910276/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-line magnetic linkedin-link" href="https://www.linkedin.com/in/mahmoud-herbawi-451910276/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
         <div class="contact-card">
@@ -295,7 +298,7 @@
           <a href="tel:+962778063127"><span class="mono">Phone</span>+962 778063127</a>
           <a href="tel:+962795781679"><span class="mono">Phone</span>+962 795781679</a>
           <a href="https://github.com/TechSolutions999" target="_blank" rel="noopener"><span class="mono">GitHub</span>github.com/TechSolutions999</a>
-          <a href="https://www.linkedin.com/in/mahmoud-herbawi-451910276/" target="_blank" rel="noopener"><span class="mono">LinkedIn</span>linkedin.com/in/mahmoud-herbawi-451910276</a>
+          <a class="linkedin-link" href="https://www.linkedin.com/in/mahmoud-herbawi-451910276/" target="_blank" rel="noopener"><span class="mono">LinkedIn</span>linkedin.com/in/mahmoud-herbawi-451910276</a>
         </div>
       </div>
     </section>
@@ -308,6 +311,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=2"></script>
 </body>
 </html>

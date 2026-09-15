@@ -76,10 +76,32 @@
 
   const toggle = document.getElementById("navToggle");
   const links = document.getElementById("navLinks");
-  toggle.addEventListener("click", () => links.classList.toggle("open"));
+
+  function setMenu(open) {
+    links.classList.toggle("open", open);
+    toggle.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.classList.toggle("nav-open", open);
+  }
+
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setMenu(!links.classList.contains("open"));
+  });
   links.querySelectorAll("a").forEach((a) =>
-    a.addEventListener("click", () => links.classList.remove("open"))
+    a.addEventListener("click", () => setMenu(false))
   );
+  document.addEventListener("click", (e) => {
+    if (!links.classList.contains("open")) return;
+    if (!nav.contains(e.target)) setMenu(false);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setMenu(false);
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1080) setMenu(false);
+  });
 
   if (!reduced && cursor && ring && window.matchMedia("(pointer:fine)").matches) {
     let x = 0, y = 0, rx = 0, ry = 0;
